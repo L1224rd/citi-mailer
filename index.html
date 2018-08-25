@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>smoe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .code-container {
+      margin-top: 20px;
+      font-family: monospace;
+    }
+
+    .tab {
+      margin-left: 10px;
+    }
+
+    .comment {
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Simplest Mailer on Earth!</h2>
+  <h3>How to use it:</h3>
+  <p>Send a POST request to <a href="https://smoe.herokuapp.com">https://smoe.herokuapp.com</a> with the following body:</p>
+  <div class="code-container">
+    <div>{</div>
+      <div class="tab">host: String, <span class="comment">// smtp host, default: 'smtp.gmail.com'</span></div>
+      <div class="tab">port: Number, <span class="comment">// default: 465</span></div>
+      <div class="tab">secure: Boolean, <span class="comment">// true for 465, false for other ports, default: true</span></div>
+      <div class="tab">user: String, <span class="comment">// user email</span></div>
+      <div class="tab">password: String, <span class="comment">// we do nothing with your password</span></div>
+      <div class="tab">receiver: String, <span class="comment">// can be a list of emails separated by comas</span></div>
+      <div class="tab">subject: String, <span class="comment">// subject of the email</span></div>
+      <div class="tab">body: String, <span class="comment">// accepts html</span></div>
+    <div>}</div>
+  </div>
+  <p>The response will be:</p>
+  <div class="code-container">
+    <div class="comment">// success</div>
+    <div>{</div>
+      <div class="tab">type: 'success'</div>
+      <div class="tab">info: info</span></div>
+    <div>}</div>
+    <br>
+    <div class="comment">// error</div>
+    <div>{</div>
+      <div class="tab">type: 'error'</div>
+      <div class="tab">info: error</span></div>
+    <div>}</div>
+  </div>
+  <br><br>
+  <div>Check the code on <a href="https://github.com/L1224rd/smoe">GitHub</a>!</div>
+</body>
+
+</html>
